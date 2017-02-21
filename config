@@ -208,3 +208,9 @@ bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -width 100 -padding 400 -opaci
 
 
 exec feh --bg-scale /home/greg/Pictures/wallpaper.jpg
+
+set $capture_all "shutter -f -e -c -o ~/Pictures/Screenshots/%Y-%m-%d_%T_$nb_name_$R.png"
+set $capture_sel "shutter -s -e -c -o ~/Pictures/Screenshots/%Y-%m-%d_%T_$nb_name_$R.png"
+
+bindsym Print exec $capture_sel 
+bindsym Shift+Print exec $capture_all
