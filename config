@@ -189,7 +189,6 @@ bar {
 	}
 }
 
-bindsym $mod+shift+x ecex i3lock
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% #increase sound volume
@@ -214,3 +213,7 @@ set $capture_sel "shutter -s -e -c -o ~/Pictures/Screenshots/%Y-%m-%d_%T_$nb_nam
 
 bindsym Print exec $capture_sel 
 bindsym Shift+Print exec $capture_all
+
+set $lock "sleep 0.5; xset dpms force off; gnome-screensaver-command -l"
+bindsym Ctrl+Alt+l exec $lock 
+bindsym $mod+shift+x exec $lock 
