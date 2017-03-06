@@ -217,3 +217,5 @@ bindsym Shift+Print exec $capture_all
 set $lock "sleep 0.5; xset dpms force off; gnome-screensaver-command -l"
 bindsym Ctrl+Alt+l exec $lock 
 bindsym $mod+shift+x exec $lock 
+
+exec syndaemon -i 1 -K -d # Disable touchpad which typing
