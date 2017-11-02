@@ -219,3 +219,6 @@ bindsym Ctrl+Alt+l exec $lock
 bindsym $mod+shift+x exec $lock 
 
 exec syndaemon -i 1 -K -d # Disable touchpad which typing
+exec indicator-sound-switcher
+exec nm-applet
+exec blueman-applet
