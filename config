@@ -222,3 +222,11 @@ exec syndaemon -i 1 -K -d # Disable touchpad which typing
 exec indicator-sound-switcher
 exec nm-applet
 exec blueman-applet
+ 
+## quick terminal
+exec --no-startup-id terminator -T metask
+for_window [title="metask"] move scratchpad
+bindsym $mod+z [title="metask"] scratchpad show
+
+
+exec redshift
