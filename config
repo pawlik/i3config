@@ -206,7 +206,7 @@ bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 
 bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -padding 50 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 32"
 
-exec feh --bg-scale /home/greg/Pictures/wallpaper.jpg
+exec feh --bg-scale ~/Pictures/walpaper$[${RANDOM}%8].jpg || feh --bg-scale ~/Pictures/walpaper0.jpg
 
 set $capture_all "shutter -f -e -c -o ~/Pictures/Screenshots/%Y-%m-%d_%T_$nb_name_$R.png"
 set $capture_sel "shutter -s -e -c -o ~/Pictures/Screenshots/%Y-%m-%d_%T_$nb_name_$R.png"
